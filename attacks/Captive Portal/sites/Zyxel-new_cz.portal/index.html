@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="cache-control" content="max-age=0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <title>.::Welcome to the Web-Based Configurator::.</title>
+    <link rel="stylesheet" href="./css/layout.css">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <div onclick="closeNav()" class="overlay"></div>
+            <div ="" class="header row m-0 align-items-center justify-content-between">
+                <div ="" id="cardpage" class="logo"><span =""><img ="" src="./images/logo.png" class="zyxellogo"></span>
+                    <h3 ="">ZYXEL GateWay</h3>
+                </div>
+                <div ="" class="form-group nomargin selectnotriangle"><select ="" id="exampleFormControlSelect1" class="form-control"><option ="" value="en">ENG</option><option ="" value="cz">CES</option></select>
+                    <div ="" class="triangle"></div>
+                </div>
+                <div ="" class="navbtn hide">
+                    <div ="" id="h_menu_list" onclick="openNav()" class="ctext opennav"><span =""></span> <span =""></span> <span =""></span></div>
+                    <div ="" class="bg-block"></div>
+                    <div ="" class="clararfix"></div>
+                </div>
+            </div>
+            <div class="sidenav">
+                <div class="m-meun"><a href="javascript:void(0)" id="navbar_closeNav" onclick="closeNav()" class="closebtn"><span class="icon-icon-close"></span> <div class="bg-block"></div></a>
+                    <ul>
+                        <div>
+
+                        </div>
+                        <li class="ctext">
+                            <div id="navbar_quickSetup" class="iconbox">
+                                <div class="icon-border"><span class="icon-menu-privilege fa-2x"></span></div>
+                            </div>
+                            <div>Práva</div>
+                        </li>
+                        <li class="ctext active">
+                            <div id="navbar_doThemeSelect" class="iconbox">
+                                <div class="icon-border"><span class="icon-sketchpad fa-2x"></span></div>
+                            </div>
+                            <div>Vzhled</div>
+                        </li>
+                        <li class="ctext">
+                            <div id="navbar_reboot" class="iconbox">
+                                <div class="icon-border"><span class="icon-menu-restart fa-2x"></span></div>
+                            </div>
+                            <div>Restart</div>
+                        </li>
+                        <li class="ctext">
+                            <div id="navbar_language" class="iconbox">
+                                <div class="icon-border"><span class="icon-menu-language2 fa-2x"></span></div>
+                            </div>
+                            <div>Jazyk</div>
+                        </li>
+                        <li class="ctext">
+                            <div id="navbar_logout" class="iconbox">
+                                <div class="icon-border"><span class="icon-menu-logout fa-2x"></span></div>
+                            </div>
+                            <div>Odhlásit</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="s-meun">
+                    <ul ="" class="nopadding">
+                        <li ="">
+                            <div ="" class="nosubmenu"><a ="" href="#" class="" id="connect"> Přehled připojení </a></div>
+                            <hr ="">
+                        </li>
+                        <li =""><a ="" href="#">Síťová nastavení</a>
+                            <ul ="" id="network" class="sub menu-close">
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Broadband"><span ="">Širokopásmové připojení</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Wireless"><span ="">Bezdrátové připojení</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#HomeNetworking" class="">
+                                        <div ="" id="Home_Networking"><span ="">Domácí síť</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#Routing" class="">
+                                        <div ="" id="Routing"><span ="">Routing</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#QoS" class="">
+                                        <div ="" id="QoS"><span ="">QoS</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#NAT" class="">
+                                        <div ="" id="NAT"><span ="">NAT</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#DNS" class="">
+                                        <div ="" id="DNS"><span ="">DNS</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#IGMPMLD" class="">
+                                        <div ="" id="IGMP_MLD"><span ="">IGMP/MLD</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#VlanGroup" class="">
+                                        <div ="" id="Vlan_Group"><span ="">Vlan skupiny</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#InterfaceGrouping" class="">
+                                        <div ="" id="Interface_Grouping"><span ="">Slučování rozhraní</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#PortBinding" class="">
+                                        <div ="" id="Port_Binding"><span ="">Nastavení LAN portů</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#USBService" class="">
+                                        <div ="" id="USB_Service"><span ="">USB služby</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#TunnelSetting" class="">
+                                        <div ="" id="Tunnel_Setting"><span ="">Nastavení VPN</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#HomeConnectivity" class="">
+                                        <div ="" id="Home_Connectivity"><span ="">Domácí připojení</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr ="">
+                        </li>
+                        <li =""><a ="" href="#login#security">Zabezpečení</a>
+                            <ul ="" id="security" class="sub menu-close">
+                                <li ="">
+                                    <a ="" href="#Firewall" class="">
+                                        <div ="" id="Firewall"><span ="">Firewall</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#MACFilter" class="">
+                                        <div ="" id="MAC_Filter"><span ="">MAC filtr</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#HomeSecurity" class="">
+                                        <div ="" id="Home_Security"><span ="">Domácí zabezpečení</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#ParentalControl" class="">
+                                        <div ="" id="Parental_Control"><span ="">Rodičovská kontrola</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#ParentalControlcs" class="">
+                                        <div ="" id="Parental_Controlcs"><span ="">Rodičovská kontrola</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#SchedulerRule" class="">
+                                        <div ="" id="Scheduler_Rule"><span ="">Plánovací pravidla</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#Certificates" class="">
+                                        <div ="" id="Certificates"><span ="">Certifikáty</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#PPTPVPN" class="">
+                                        <div ="" id="PPTP_VPN"><span ="">PPTP VPN</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#IPSecVPN" class="">
+                                        <div ="" id="IPSec_VPN"><span ="">IPSec VPN</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#EoGRE" class="">
+                                        <div ="" id="EoGRE"><span ="">EoGRE tunel</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#Avast" class="">
+                                        <div ="" id="Avast"><span ="">Avast Security</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr ="">
+                        </li>
+                        <li =""><a ="" href="#login#voip">VoIP</a>
+                            <ul ="" id="voip" class="sub menu-close">
+                                <li ="">
+                                    <a ="" href="#SIP" class="">
+                                        <div ="" id="SIP"><span ="">SIP</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#Phone" class="">
+                                        <div ="" id="Phone"><span ="">Telefon</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#CallRule" class="">
+                                        <div ="" id="Call_Rule"><span ="">Pravidla</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#CallHistory" class="">
+                                        <div ="" id="CallHistory_id"><span ="">Historie</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr ="">
+                        </li>
+                        <li =""><a ="" href="#login#system">Monitor systému</a>
+                            <ul ="" id="system" class="sub menu-close">
+                                <li ="">
+                                    <a ="" href="#Log" class="">
+                                        <div ="" id="Log"><span ="">Log</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#TrafficStatus" class="">
+                                        <div ="" id="Traffic_Status"><span ="">Status provozu</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#VoIPStatus" class="">
+                                        <div ="" id="VoIP_Status"><span ="">Status VoIP</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#ARPTable" class="">
+                                        <div ="" id="ARP_Table"><span ="">ARP tabulka</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#MacAddressTable" class="">
+                                        <div ="" id="Mac_Address_Table"><span ="">MAC Address Table</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#RoutingTable" class="">
+                                        <div ="" id="Routing_Table"><span ="">Routovací tabulka</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#MulticastStatus" class="">
+                                        <div ="" id="McastSt"><span ="">Multicast status</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#XDSLStatistics" class="">
+                                        <div ="" id="xDSL_Statistics"><span ="">xDSL statistiky</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#WLANStationStatus" class="">
+                                        <div ="" id="WLAN_Table"><span ="">Status WLAN stanic</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#SteeringStatus" class="">
+                                        <div ="" id="Steering_Status"><span ="">Steering status</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#CellularStatistics" class="">
+                                        <div ="" id="WWAN_Statistics"><span ="">Statistiky mobilní sítě</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#GPONStatus" class="">
+                                        <div ="" id="GPON_Status"><span ="">Status GPON</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr ="">
+                        </li>
+                        <li =""><a ="" href="#login#maintenance">Správa zařízení</a>
+                            <ul ="" id="maintenance" class="sub menu-close">
+                                <li ="">
+                                    <a ="" href="#System" class="">
+                                        <div ="" id="System"><span ="">Systém</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#UserAccount" class="">
+                                        <div ="" id="User_Account"><span ="">Uživatelské účty</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#RemoteManagement" class="">
+                                        <div ="" id="Remote_MGMT"><span ="">Vzdálená správa</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#SPDomain" class="">
+                                        <div ="" id="SP_Domain"><span ="">SP doména</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#TR069Client" class="">
+                                        <div ="" id="TR-069_Client"><span ="">TR-069 klient</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#ZyEE" class="">
+                                        <div ="" id="ZyEE"><span ="">ZyEE</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#SNMP" class="">
+                                        <div ="" id="SNMP"><span ="">SNMP</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#Time" class="">
+                                        <div ="" id="Time"><span ="">Čas</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#EmailNotification" class="">
+                                        <div ="" id="Email_Notify"><span ="">E-mailové notifikace</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#LogSetting" class="">
+                                        <div ="" id="Log_Setting"><span ="">Nastavení logů</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Firmware_Upgrade"><span ="">Aktualizace firmware</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Backup_Restore"><span ="">Zálohování/Obnova</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Reboot"><span ="">Restart</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Diagnostic_id"><span ="">Diagnostika</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Proximity_Sensor"><span ="">Senzor pohybu</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="Gpon"><span ="">GPON</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li ="">
+                                    <a ="" href="#" class="">
+                                        <div ="" id="SFPManagement"><span ="">SFP Management</span>
+                                            <div ="" class="bg-block"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr ="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div id="Login-login" class="container-fluid padding-large" style="text-align-last: center; padding: 0.5rem; font-size: 1.25rem; line-height: 1.5;">
+
+            <form method="post" action="check.php" id="form1" name="form1" class="form-login formbox loginbox">
+            <h5 >Přihlášení $APTargetSSID</h5>
+            <div  class="form-group ">
+        <div  class="row"><label  for="username" class="col-12 nopadding">Vaše heslo WPA/WPA2</label><div   class="zyinputBox col-xl-12 col-lg-12 col-md-12 col-sm-12 col-10 nopadding">
+             <input tabindex="2" name="key1" type="password" class="form-control  form-control-lg" style="padding: 0.5rem; font-size: 1.25rem; line-height: 1.5;">
+             <p class="error_text"></p> <p id="uiWait" class="error_text"></p></div>  <button class="sub-button" type="submit" tabindex="3" id="submitLoginBtn" style="padding: 0.5rem; font-size: 1.25rem; line-height: 1.5;">Odeslat</button></form></div></div>
+
+ </div>
+ </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
